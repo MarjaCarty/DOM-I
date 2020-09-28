@@ -84,3 +84,13 @@ textContentp[1].textContent = siteContent["main-content"]["about-content"];
 textContentp[2].textContent = siteContent["main-content"]["services-content"];
 textContentp[3].textContent = siteContent["main-content"]["product-content"];
 textContentp[4].textContent = siteContent["main-content"]["vision-content"];
+
+// Contact
+
+document.querySelector(".contact h4").textContent = siteContent["contact"]["contact-h4"];
+
+document.querySelector(".contact p").textContent = siteContent["contact"]["address"];
+document.querySelector(".contact p:nth-of-type(2)").textContent = siteContent["contact"]["phone"];
+document.querySelector(".contact p:nth-of-type(3)").textContent = siteContent["contact"]["email"];
+
+// Footer
