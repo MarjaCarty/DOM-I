@@ -100,3 +100,24 @@ document.querySelector(".contact p:nth-of-type(3)").textContent =
 // Footer
 document.querySelector("footer p").textContent =
   siteContent["footer"]["copyright"];
+
+//New Content
+
+let link1 = document.createElement("a");
+link1.textContent = "New";
+
+let link2 = document.createElement("a");
+link2.textContent = "Item";
+
+document.querySelector("nav").appendChild(link1);
+document.querySelector("nav").prepend(link2);
+
+///////////////////////////////////////////
+
+let allLinks = document.querySelectorAll("nav a");
+
+allLinks.forEach((link) => {
+  link.style.color = "green";
+});
+
+//////////////////////////////////////////
