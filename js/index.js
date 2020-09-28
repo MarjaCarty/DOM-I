@@ -87,10 +87,16 @@ textContentp[4].textContent = siteContent["main-content"]["vision-content"];
 
 // Contact
 
-document.querySelector(".contact h4").textContent = siteContent["contact"]["contact-h4"];
+document.querySelector(".contact h4").textContent =
+  siteContent["contact"]["contact-h4"];
 
-document.querySelector(".contact p").textContent = siteContent["contact"]["address"];
-document.querySelector(".contact p:nth-of-type(2)").textContent = siteContent["contact"]["phone"];
-document.querySelector(".contact p:nth-of-type(3)").textContent = siteContent["contact"]["email"];
+document.querySelector(".contact p").textContent =
+  siteContent["contact"]["address"];
+document.querySelector(".contact p:nth-of-type(2)").textContent =
+  siteContent["contact"]["phone"];
+document.querySelector(".contact p:nth-of-type(3)").textContent =
+  siteContent["contact"]["email"];
 
 // Footer
+document.querySelector("footer p").textContent =
+  siteContent["footer"]["copyright"];
