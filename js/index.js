@@ -51,9 +51,7 @@ logo.setAttribute("src", siteContent["nav"]["img-src"]);
 let keys = Object.keys(siteContent.nav);
 
 for (let i = 0; i < keys.length - 1; i++) {
-  let link = document.querySelector(
-    `.container header nav a:nth-of-type(${i + 1})`
-  );
+  let link = document.querySelector(`nav a:nth-of-type(${i + 1})`);
   link.href = keys[i];
   link.textContent = siteContent["nav"][`nav-item-${i + 1}`];
   console.log(link);
@@ -64,3 +62,15 @@ for (let i = 0; i < keys.length - 1; i++) {
 document.querySelector(".cta-text h1").textContent = siteContent.cta.h1;
 document.querySelector(".cta-text button").textContent = siteContent.cta.button;
 document.querySelector(".cta #cta-img").src = siteContent.cta["img-src"];
+
+// Main Content
+
+document.querySelector(".text-content h4").textContent =
+  siteContent["main-content"]["features-h4"];
+document.querySelector(".text-content p").textContent =
+  siteContent["main-content"]["features-content"];
+
+document.querySelector(".text-content:nth-of-type(2) h4").textContent =
+  siteContent["main-content"]["about-h4"];
+document.querySelector(".text-content:nth-of-type(2) p").textContent =
+  siteContent["main-content"]["about-content"];
