@@ -65,12 +65,22 @@ document.querySelector(".cta #cta-img").src = siteContent.cta["img-src"];
 
 // Main Content
 
-document.querySelector(".text-content h4").textContent =
-  siteContent["main-content"]["features-h4"];
-document.querySelector(".text-content p").textContent =
-  siteContent["main-content"]["features-content"];
+let textContentsh4 = document.querySelectorAll(".text-content h4");
+console.log(textContentsh4);
 
-document.querySelector(".text-content:nth-of-type(2) h4").textContent =
-  siteContent["main-content"]["about-h4"];
-document.querySelector(".text-content:nth-of-type(2) p").textContent =
-  siteContent["main-content"]["about-content"];
+textContentsh4[0].textContent = siteContent["main-content"]["features-h4"];
+textContentsh4[1].textContent = siteContent["main-content"]["about-h4"];
+textContentsh4[2].textContent = siteContent["main-content"]["services-h4"];
+textContentsh4[3].textContent = siteContent["main-content"]["product-h4"];
+textContentsh4[4].textContent = siteContent["main-content"]["vision-h4"];
+
+document.querySelector("#middle-img").src =
+  siteContent["main-content"]["middle-img-src"];
+
+let textContentp = document.querySelectorAll(".text-content p");
+
+textContentp[0].textContent = siteContent["main-content"]["features-content"];
+textContentp[1].textContent = siteContent["main-content"]["about-content"];
+textContentp[2].textContent = siteContent["main-content"]["services-content"];
+textContentp[3].textContent = siteContent["main-content"]["product-content"];
+textContentp[4].textContent = siteContent["main-content"]["vision-content"];
