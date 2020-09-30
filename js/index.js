@@ -66,36 +66,38 @@ document.querySelector(".cta #cta-img").src = siteContent.cta["img-src"];
 // Main Content
 
 let textContentsh4 = document.querySelectorAll(".text-content h4");
-console.log(textContentsh4);
+let textContentsp = document.querySelectorAll(".text-content p");
+let mainKeys = Object.keys(siteContent["main-content"]);
 
-textContentsh4[0].textContent = siteContent["main-content"]["features-h4"];
-textContentsh4[1].textContent = siteContent["main-content"]["about-h4"];
-textContentsh4[2].textContent = siteContent["main-content"]["services-h4"];
-textContentsh4[3].textContent = siteContent["main-content"]["product-h4"];
-textContentsh4[4].textContent = siteContent["main-content"]["vision-h4"];
+let filteredh4Keys = mainKeys.filter((item) => {
+  return item.includes("h4");
+});
+
+let filteredContentKeys = mainKeys.filter((item) => {
+  return item.includes("content");
+});
 
 document.querySelector("#middle-img").src =
   siteContent["main-content"]["middle-img-src"];
 
-let textContentp = document.querySelectorAll(".text-content p");
-
-textContentp[0].textContent = siteContent["main-content"]["features-content"];
-textContentp[1].textContent = siteContent["main-content"]["about-content"];
-textContentp[2].textContent = siteContent["main-content"]["services-content"];
-textContentp[3].textContent = siteContent["main-content"]["product-content"];
-textContentp[4].textContent = siteContent["main-content"]["vision-content"];
+for (let i = 0; i < textContentsh4.length; i++) {
+  textContentsh4[i].textContent =
+    siteContent["main-content"][filteredh4Keys[i]];
+  textContentsp[i].textContent =
+    siteContent["main-content"][filteredContentKeys[i]];
+}
 
 // Contact
 
 document.querySelector(".contact h4").textContent =
   siteContent["contact"]["contact-h4"];
 
-document.querySelector(".contact p").textContent =
-  siteContent["contact"]["address"];
-document.querySelector(".contact p:nth-of-type(2)").textContent =
-  siteContent["contact"]["phone"];
-document.querySelector(".contact p:nth-of-type(3)").textContent =
-  siteContent["contact"]["email"];
+let contactp = document.querySelectorAll(".contact p");
+let contactKeys = Object.keys(siteContent["contact"]);
+
+for (let i = 0; i < contactp.length; i++) {
+  contactp[i].textContent = siteContent["contact"][contactKeys[i + 1]];
+}
 
 // Footer
 document.querySelector("footer p").textContent =
